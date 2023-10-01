@@ -12,6 +12,8 @@ services:
             - MYSQL_TCP_PORT=$MYSQL_DOCKER_PORT
         ports:
             - $MYSQL_LOCAL_PORT:$MYSQL_DOCKER_PORT
+        volumes:
+            - ./init:/docker-entrypoint-initdb.d
         expose:
             - $MYSQL_DOCKER_PORT
         healthcheck:

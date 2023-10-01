@@ -27,7 +27,6 @@ module.exports = {
         let title = req.body.title;
         let description = req.body.description;
 
-        console.log(description, title);
         if (title && description) {
             json.data = await TaskServices.CreateTask(title, description);
             res.status(201).json("Successfully created task");
