@@ -10,7 +10,7 @@ const bodyParser = require('body-parser');
 
 const seeder = require('./seeder');
 
-const PORT = process.env.PORT || 3333
+const PORT = process.env.NODE_LOCAL_PORT;
 
 const app = express();
 
